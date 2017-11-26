@@ -16,4 +16,4 @@ FOUNDATION_EXPORT const unsigned char Blake2VersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Blake2/PublicHeader.h>
 
-
+#import <Blake2/Blake2s.h>

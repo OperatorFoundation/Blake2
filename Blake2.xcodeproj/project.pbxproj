@@ -10,6 +10,12 @@
 		CADCCCEA1FCA7740004EBAA6 /* Blake2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADCCCE01FCA7740004EBAA6 /* Blake2.framework */; };
 		CADCCCEF1FCA7740004EBAA6 /* Blake2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CADCCCEE1FCA7740004EBAA6 /* Blake2Tests.m */; };
 		CADCCCF11FCA7740004EBAA6 /* Blake2.h in Headers */ = {isa = PBXBuildFile; fileRef = CADCCCE31FCA7740004EBAA6 /* Blake2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CADCCCFC1FCA7768004EBAA6 /* Blake2s.h in Headers */ = {isa = PBXBuildFile; fileRef = CADCCCFA1FCA7768004EBAA6 /* Blake2s.h */; };
+		CADCCCFD1FCA7768004EBAA6 /* Blake2s.m in Sources */ = {isa = PBXBuildFile; fileRef = CADCCCFB1FCA7768004EBAA6 /* Blake2s.m */; };
+		CADCCCFE1FCA7768004EBAA6 /* Blake2s.m in Sources */ = {isa = PBXBuildFile; fileRef = CADCCCFB1FCA7768004EBAA6 /* Blake2s.m */; };
+		CADCCD061FCA7874004EBAA6 /* cblake2s.c in Sources */ = {isa = PBXBuildFile; fileRef = CADCCD041FCA7874004EBAA6 /* cblake2s.c */; };
+		CADCCD071FCA7874004EBAA6 /* cblake2s.c in Sources */ = {isa = PBXBuildFile; fileRef = CADCCD041FCA7874004EBAA6 /* cblake2s.c */; };
+		CADCCD081FCA7874004EBAA6 /* cblake2s.h in Headers */ = {isa = PBXBuildFile; fileRef = CADCCD051FCA7874004EBAA6 /* cblake2s.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +35,11 @@
 		CADCCCE91FCA7740004EBAA6 /* Blake2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Blake2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADCCCEE1FCA7740004EBAA6 /* Blake2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Blake2Tests.m; sourceTree = "<group>"; };
 		CADCCCF01FCA7740004EBAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CADCCCFA1FCA7768004EBAA6 /* Blake2s.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Blake2s.h; sourceTree = "<group>"; };
+		CADCCCFB1FCA7768004EBAA6 /* Blake2s.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Blake2s.m; sourceTree = "<group>"; };
+		CADCCD041FCA7874004EBAA6 /* cblake2s.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cblake2s.c; sourceTree = "<group>"; };
+		CADCCD051FCA7874004EBAA6 /* cblake2s.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cblake2s.h; sourceTree = "<group>"; };
+		CADCCD091FCA7ABC004EBAA6 /* Blake2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blake2-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +64,7 @@
 		CADCCCD61FCA7740004EBAA6 = {
 			isa = PBXGroup;
 			children = (
+				CADCCD091FCA7ABC004EBAA6 /* Blake2-Bridging-Header.h */,
 				CADCCCE21FCA7740004EBAA6 /* Blake2 */,
 				CADCCCED1FCA7740004EBAA6 /* Blake2Tests */,
 				CADCCCE11FCA7740004EBAA6 /* Products */,
@@ -71,7 +83,11 @@
 		CADCCCE21FCA7740004EBAA6 /* Blake2 */ = {
 			isa = PBXGroup;
 			children = (
+				CADCCD051FCA7874004EBAA6 /* cblake2s.h */,
+				CADCCD041FCA7874004EBAA6 /* cblake2s.c */,
 				CADCCCE31FCA7740004EBAA6 /* Blake2.h */,
+				CADCCCFA1FCA7768004EBAA6 /* Blake2s.h */,
+				CADCCCFB1FCA7768004EBAA6 /* Blake2s.m */,
 				CADCCCE41FCA7740004EBAA6 /* Info.plist */,
 			);
 			path = Blake2;
@@ -94,6 +110,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CADCCCF11FCA7740004EBAA6 /* Blake2.h in Headers */,
+				CADCCCFC1FCA7768004EBAA6 /* Blake2s.h in Headers */,
+				CADCCD081FCA7874004EBAA6 /* cblake2s.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,10 +165,12 @@
 				TargetAttributes = {
 					CADCCCDF1FCA7740004EBAA6 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					CADCCCE81FCA7740004EBAA6 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -195,6 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CADCCD061FCA7874004EBAA6 /* cblake2s.c in Sources */,
+				CADCCCFD1FCA7768004EBAA6 /* Blake2s.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CADCCCFE1FCA7768004EBAA6 /* Blake2s.m in Sources */,
+				CADCCD071FCA7874004EBAA6 /* cblake2s.c in Sources */,
 				CADCCCEF1FCA7740004EBAA6 /* Blake2Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +353,7 @@
 		CADCCCF51FCA7740004EBAA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -344,12 +369,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.operatorfoundation.Blake2;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		CADCCCF61FCA7740004EBAA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -365,12 +393,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.operatorfoundation.Blake2;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		CADCCCF81FCA7740004EBAA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
@@ -378,12 +408,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.operatorfoundation.Blake2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Blake2/Blake2Tests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		CADCCCF91FCA7740004EBAA6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 67Y4NSLDQ3;
@@ -391,6 +425,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.operatorfoundation.Blake2Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Blake2/Blake2Tests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
