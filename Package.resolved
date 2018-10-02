@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Datable",
+        "repositoryURL": "https://github.com/OperatorFoundation/Datable.git",
+        "state": {
+          "branch": null,
+          "revision": "02f1f9294b7df265b059ce9efa48e3f354b6967e",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
